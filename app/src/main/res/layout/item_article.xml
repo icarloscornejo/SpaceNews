@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.prototype.spacenews.presentation.home.ArticleViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_85sdp"
+        android:onClick="@{() -> viewModel.openArticleDetail()}"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            glideSrc="@{viewModel.imageField}"
+            android:layout_width="@dimen/_71sdp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@mipmap/ic_space_news" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{viewModel.titleField}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SpaceX extends its own rocket reuse record on Starlink launch" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@{viewModel.descriptionField}"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_image"
+            tools:text="Russia’s decision to partner with China on a planned lunar research station, and not join the U.S.-led Artemis moon program, was disappointing after more than two decades of cooperation on the International Space Station, says NASA’s top human spaceflight official." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Space News</string>
+    <string name="home_toolbar_title_space">Space</string>
+    <string name="home_toolbar_title_news">News</string>
+    <string name="request_failed">An error has occurred while procesing your request, please try again</string>
+    <string name="request_no_data">The call didn\'t return any results, please refresh to try again</string>
+    <string name="detail_title">News Detail</string>
+    <string name="detail_by">by</string>
+    <string name="detail_go_to_news_site">Go to news site</string>
+</resources>
